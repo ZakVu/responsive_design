@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive design</title>
+    <style>
+        .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery-item {
+    
+    margin: 10px;
+    text-align: center;
+   
+}
+
+.gallery-item img {
+    background-color: gray;
+    width: 200px;
+    height: auto;
+    border: 0.5px solid grey;
+    border-radius: 15px;
+}
+.random-text {
+    margin-top: 20px; 
+    text-align: justify; 
+}
+
+/* Styles for desktop */
+@media (min-width: 768px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr); 
+        grid-template-rows: auto auto; 
+        gap: 20px;
+    }
+
+    .gallery-item {
+        width: 100%; 
+    }
+    .random-text {
+        grid-column: 1 / -1; 
+        margin-top: 40px; 
+    }
+    
+}
+
+/* Styles for tablets */
+@media (min-width: 481px) and (max-width: 767px) {
+    .gallery {
+        grid-template-columns: repeat(4, 1fr); 
+    }
+
+    .random-text {
+        grid-column: 1 / -1; 
+        margin-top: 20px; 
+    }
+}
+
+/* Styles for phones */
+@media (max-width: 480px) {
+    .gallery-item {
+        flex: 0 0 100%;
+    }
+}
+    </style>
+
+</head>
+<body>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="placeholder-image.png" alt="Image 1">
+            <h3>Image 1</h3>
+            
+        </div>
+        <div class="gallery-item">
+            <img src="placeholder-image.png" alt="Image 2">
+            <h3>Image 2</h3>
+        </div>
+        <div class="gallery-item">
+            <img src="placeholder-image.png" alt="Image 3">
+            <h3>Image 3</h3>
+        </div>
+        <div class="gallery-item">
+            <img src="placeholder-image.png" alt="Image 4">
+            <h3>Image 4</h3>
+        </div>
+        <div class="gallery-item">
+            <img src="placeholder-image.png" alt="Image 5">
+            <h3>Image 5</h3>
+        </div>
+        <div class="gallery-item">
+            <img src="placeholder-image.png" alt="Image 6">
+            <h3>Image 6</h3>
+        </div>
+        <div class="gallery-item">
+            <img src="placeholder-image.png" alt="Image 7">
+            <h3>Image 7</h3>
+        </div>
+        <div class="gallery-item">
+            <img src="placeholder-image.png" alt="Image 8">
+            <h3>Image 8</h3>
+        </div>
+        <div class="gallery-item">
+            <img src="placeholder-image.png" alt="Image 9">
+            <h3>Image 9</h3>
+        </div>
+        <div class="gallery-item">
+            <img src="placeholder-image.png" alt="Image 10">
+            <h3>Image 10</h3>
+        </div>
+
+        <div class="random-text">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
+                 when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                 It has survived not only five centuries, but also the leap into electronic typesetting, 
+                 remaining essentially unchanged. It was popularised in the 1960s with the release 
+                 of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing 
+                 software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+        </div>
+    
+            
+    
+</body>
+</html>
